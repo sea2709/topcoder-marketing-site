@@ -1,0 +1,87 @@
+body {
+  background-color: #ebebeb;
+}
+
+h2, h3 {
+  margin: 15px 0 5px;
+}
+
+p {
+  margin: 5px 0;
+}
+
+.nav-bar-wrap h2 {
+  margin: 0 auto;
+  color: white;
+}
+
+.page-wrap {
+  margin: 30px;
+  padding: 30px;
+  color: #333333;
+  background-color: white;
+}
+
+.page-wrap h1 {
+  text-align: center;
+}
+
+.code-wrap {
+  background: #f6f6f6;
+  margin: 0;
+  display: block;
+  white-space: pre;
+  font: 13px/13px monospace, sans-serif;
+}
+
+code {
+  padding: 1px 3px; 
+  background: #e0f0f4;
+}
+
+.icons-wrap{
+  width: 100%; 
+  display: flex; 
+  flex-flow: row wrap; 
+  padding: 0; 
+  margin: 0; 
+  list-style: none; 
+}
+
+.icons-wrap li {
+  display: inline-block; 
+  width: 90px; 
+  margin: 2px; 
+  padding: 7px 4px; 
+  background: #f6f6f6; 
+  text-align: center; 
+  font-size: 13px;
+}
+
+.icons-wrap li .ic {
+  margin-bottom: 7px;
+}
+
+.avatar-50,
+.avatar-100,
+.avatar-150,
+.avatar-265 {
+  display: inline-block;
+  margin-right: 10px;
+}
+.avatar-50 {
+  width: 50px;
+}
+.avatar-100 {
+  width: 100px;
+}
+.avatar-150 {
+  width: 150px;
+}
+.avatar-265 {
+  width: 265px;
+}
+
+.quote-wrap-2 {
+  border: 1px solid #CCC;
+}

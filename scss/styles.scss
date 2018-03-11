@@ -1,6 +1,8 @@
 @import 'tc-includes';
 @import 'reset';
 
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
 // Use to list all modules to include
 @import 'buttons';
 @import 'checkboxes';
@@ -12,3 +14,4 @@
 @import 'nav-bar';
 @import 'tabs';
 @import 'footer';
+@import 'quotes';

@@ -1,0 +1,187 @@
+@import 'tc-includes';
+
+// wrapper variables
+$quote-height: $base-unit*88;
+$carousel-navigation-bottom: $base-unit*8;
+
+$slider-item-padding: $base-unit*6;
+$slider-item-line-height: $base-unit*5;
+
+$slider-item-header-margin-bottom: $base-unit*4;
+$slider-item-header-font-size: $tc-body-lg;
+
+$slider-item-content-margin-bottom: $base-unit*8.5;
+$slider-item-content-font-size: $tc-body-lg;
+
+$slider-arrow-color: $tc-dark-blue-90;
+
+$slider-navigation-spacing: $base-unit*1.6;
+
+$user-name-color: $tc-black;
+$user-role-color: $tc-gray-80;
+
+.quote-wrap {
+  @include roboto();
+  position: relative;
+
+  .image {
+    width: 57.65625%;
+
+    img {
+      width: 100%;
+      height: $quote-height;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .content-wrap {
+    background: $tc-white;
+    position: absolute;
+    top: $base-unit*12.5;
+    bottom: $base-unit*16.5;
+    right: 0;
+    width: 50%;
+    box-shadow: 0 1px 3px 1px $tc-gray-20;
+    border-radius: $corner-radius;
+    z-index: 1;
+  }
+}
+
+.carousel-wrap {
+  height: 100%;
+
+  .carousel-slider {
+    height: 100%;
+
+    &-item {
+      position: relative;
+      line-height: $slider-item-line-height;
+      padding: $slider-item-padding;
+      display: none;
+
+      &.current {
+        display: block;
+      }
+
+      .item-header {
+        @include roboto-bold();
+        margin-bottom: $slider-item-header-margin-bottom;
+        font-size: $slider-item-header-font-size;
+      }
+
+      .item-content {
+        @include roboto-light();
+        font-style: oblique;
+        font-size: $slider-item-content-font-size;
+        margin-bottom: $slider-item-content-margin-bottom;
+      }
+
+      .item-user {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        line-height: 1;
+
+        .user-avatar {
+          width: 50px;
+          height: 50px;
+          margin-right: 10px;
+        }
+
+        .name {
+          @include tc-heading-small();
+          @include roboto-bold();
+          color: $user-name-color;
+        }
+
+        .role {
+          color: $user-role-color;
+          font-size: $tc-body-sm;
+        }
+      }
+    }
+  }
+
+  .carousel-navigation {
+    margin-top: -$carousel-navigation-bottom;
+    display: flex;
+    justify-content: center;
+
+    .next, .prev {
+      color: $tc-dark-blue-90;
+      width: 10px;
+      height: 24px;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+
+    .next {
+      background-image: url('../img/shapes/icArrowRight.svg');
+    }
+
+    .prev {
+      background-image: url('../img/shapes/icArrowLeft.svg');
+    }
+
+    .page {
+      margin: 0 $slider-navigation-spacing;
+    }
+  }
+}
+
+$quote2-vertical-padding: $base-unit*10;
+$quote2-horizontal-padding: $base-unit*22.6;
+$quote2-margin-left: $base-unit*14;
+$quote2-content-font-size: $tc-body-lg;
+$quote2-content-line-height: $base-unit*7;
+$quote2-content-margin-bottom: $base-unit*5;
+$quote2-user-info-font-size: $tc-body-md;
+$quote2-user-info-color: $tc-gray-60;
+$quote2-mark-top: -10px;
+$quote2-mark-left: -30px;
+
+.quote-wrap-2 {
+  @include roboto();
+  position: relative;
+  padding: $quote2-vertical-padding $quote2-horizontal-padding;
+  display: flex;
+
+  .content-wrap {
+    margin-left: $quote2-margin-left;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      background-image: url(../img/assets/quote-mark.png);
+      width: 30px;
+      height: 22px;
+      background-size: cover;
+      top: $quote2-mark-top;
+      left: $quote2-mark-left;
+    }
+
+    .text {
+      @include roboto-light();
+      font-style: oblique;
+      font-size: $quote2-content-font-size;
+      line-height: $quote2-content-line-height;
+      margin-bottom: $quote2-content-margin-bottom;
+    }
+
+    .user-info {
+      text-align: right;
+      font-size: $quote2-user-info-font-size;
+      color: $quote2-user-info-color;
+
+      .name {
+        @include roboto-bold();
+
+        &:before {
+          content: '-';
+        }
+      }
+    }
+  }
+}
