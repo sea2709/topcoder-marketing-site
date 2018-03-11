@@ -1,0 +1,66 @@
+@import 'tc-includes';
+
+// wrapper variables
+$nav-bg: $tc-black;
+$nav-height: $base-unit*12;
+$nav-padding: $base-unit*4;
+
+// link colors & sizes
+$nav-link-color: $tc-gray-50;
+$nav-link-active-color: $tc-gray-10;
+
+.nav-bar-wrap {
+  width: 100%;
+  height: $nav-height;
+  padding: 0 $nav-padding;
+  background-color: $nav-bg;
+  display: flex;
+  align-items: center;
+  .logo {
+    margin-right: $base-unit*6;
+    height: $base-unit*4;
+  }
+  // right side buttons
+  .btns-wrap {
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  .ic-search {
+    margin-right: $base-unit*4;
+  }
+
+  .tc-btn + .tc-btn {
+    margin-left: $base-unit;
+  }
+
+  // makes header fixed to top
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    & + * {
+      margin-top: $nav-height; 
+    }
+  }
+}
+
+// header links
+.nav-menu-item {
+  display: inline-block;
+  color: $nav-link-color;
+  cursor: pointer;
+  transition: color .15s ease;
+
+  @include tc-label-sm;
+  text-transform: uppercase;
+  margin-right: $base-unit*4;
+
+  // active state
+  &:hover,
+  &:active,
+  &.active {
+    color: $nav-link-active-color;
+  }
+}

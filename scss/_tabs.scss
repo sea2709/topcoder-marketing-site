@@ -1,0 +1,60 @@
+@import 'tc-includes';
+
+// wrapper stylings
+$tabs-bar-height: $base-unit*14;
+$tabs-bar-padding: $base-unit*12;
+$tabs-bar-bg: $tc-gray-neutral-dark;
+
+// tabs vars
+$tab-color: $tc-gray-80;
+$tab-active-color: $tc-white;
+
+// the tabs wrapper is inheriting the height of the tabs bar
+// so it can serve as a placeholder when tabs is positioned fixed
+.tabs-bar-wrap {
+  height: $tabs-bar-height;
+  // make it fixed at top
+  &.fixed .tabs-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+  }
+  &.has-top .tabs-bar {
+    top: $base-unit*12;
+  }
+}
+  
+// tabs bar element
+.tabs-bar {
+  width: 100%;
+  height: $tabs-bar-height;
+  padding: 0 $tabs-bar-padding;
+  background-color: $tabs-bar-bg;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include tc-label-lg;
+  line-height: 1;
+
+  // tab item 
+  .tab {
+    display: inline-block;
+    margin-left: $base-unit;
+    padding: $base-unit*2 $base-unit*3;
+    color: $tab-color;
+    background-color: transparent;
+    border-radius: $corner-radius*3;
+
+    cursor: pointer;
+    transition: background-color .15s ease;
+    // active state
+    &:hover,
+    &:active,
+    &.active {
+      background-color: $tab-active-color; 
+      box-shadow: 0 1px 3px 0 rgba(38, 38, 40, 0.15);
+    }
+  }
+}

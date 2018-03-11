@@ -1,0 +1,47 @@
+@import 'tc-includes';
+
+// customize footer wrapper
+$footer-bg: $tc-black;
+$footer-padding: $base-unit*8 $base-unit*6 $base-unit*6;
+
+// customize footer links
+$footer-font-size: $tc-label-xs;
+$footer-link-color: $tc-gray-50;
+$footer-label-color: $tc-white;
+
+.footer-wrap {
+  padding: $footer-padding;
+  background: $footer-bg;
+  // align center the tc logo
+  .logo {
+    display: block;
+    width: 54px;
+    margin: 0 auto;
+  }
+}
+
+.footer-menu {
+  margin-top: $base-unit*6;
+  display: flex;
+  // make the footer columns of equal widths
+  > * {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 0 $base-unit*6;
+  }
+  a {
+    display: block;
+    color: $footer-link-color;
+    @include roboto;
+  }
+  h5 {
+    color: $footer-label-color;
+    @include roboto-bold;
+  }
+  h5, a {
+    padding: $base-unit 0;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-size: $footer-font-size;
+  }
+}
