@@ -2,10 +2,10 @@
 // only one sticky element is supported at a time
 
 carousel = function(box){
-    var next = box.querySelector('.next');
-    var prev = box.querySelector('.prev');
+    var nexts = box.querySelectorAll('.next');
+    var prevs = box.querySelectorAll('.prev');
     var items = box.querySelectorAll('.carousel-slider li');
-    var page = box.querySelector('.page');
+    var pages = box.querySelectorAll('.page');
     var counter = 0;
     var amount = items.length;
     var current = items[0];
@@ -24,16 +24,25 @@ carousel = function(box){
         current = items[counter];
         current.classList.add('current');
 
-        page.textContent = (counter + 1) + '/' + amount;
+        for (var i = 0; i < pages.length; i++) {
+            var page = pages[i];
+            page.textContent = (counter + 1) + '/' + amount;
+        }
     }
 
-    next.addEventListener('click', function(ev) {
-        navigate(1);
-    });
+    for (var i = 0; i < nexts.length; i++) {
+        var next = nexts[i];
+        next.addEventListener('click', function (ev) {
+            navigate(1);
+        });
+    }
 
-    prev.addEventListener('click', function(ev) {
-        navigate(-1);
-    });
+    for (var i = 0; i < prevs.length; i++) {
+        var prev = prevs[i];
+        prev.addEventListener('click', function (ev) {
+            navigate(-1);
+        });
+    }
 
     navigate(0);
 };

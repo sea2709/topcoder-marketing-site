@@ -1,0 +1,46 @@
+@import 'tc-includes';
+
+$carousel-navigation-bottom: $base-unit*8;
+$carousel-navigation-spacing: $base-unit*1.6;
+
+.carousel-wrap {
+  height: 100%;
+
+  .carousel-slider {
+    height: 100%;
+
+    &-item {
+      display: none;
+
+      &.current {
+        display: block;
+      }
+    }
+  }
+
+  .carousel-navigation {
+    margin-top: -$carousel-navigation-bottom;
+    display: flex;
+    justify-content: center;
+
+    .next, .prev {
+      color: $tc-dark-blue-90;
+      width: 10px;
+      height: 24px;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+
+    .next {
+      background-image: url('../img/shapes/icArrowRight.svg');
+    }
+
+    .prev {
+      background-image: url('../img/shapes/icArrowLeft.svg');
+    }
+
+    .page {
+      margin: 0 $carousel-navigation-spacing;
+    }
+  }
+}

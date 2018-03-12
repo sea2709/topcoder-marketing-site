@@ -2,7 +2,6 @@
 
 // wrapper variables
 $quote-height: $base-unit*88;
-$carousel-navigation-bottom: $base-unit*8;
 
 $slider-item-padding: $base-unit*6;
 $slider-item-line-height: $base-unit*5;
@@ -14,8 +13,6 @@ $slider-item-content-margin-bottom: $base-unit*8.5;
 $slider-item-content-font-size: $tc-body-lg;
 
 $slider-arrow-color: $tc-dark-blue-90;
-
-$slider-navigation-spacing: $base-unit*1.6;
 
 $user-name-color: $tc-black;
 $user-role-color: $tc-gray-80;
@@ -48,85 +45,40 @@ $user-role-color: $tc-gray-80;
   }
 }
 
-.carousel-wrap {
-  height: 100%;
+.item-header {
+  @include roboto-bold();
+  margin-bottom: $slider-item-header-margin-bottom;
+  font-size: $slider-item-header-font-size;
+}
 
-  .carousel-slider {
-    height: 100%;
+.item-content {
+  @include roboto-light();
+  font-style: oblique;
+  font-size: $slider-item-content-font-size;
+  margin-bottom: $slider-item-content-margin-bottom;
+}
 
-    &-item {
-      position: relative;
-      line-height: $slider-item-line-height;
-      padding: $slider-item-padding;
-      display: none;
+.item-user {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  line-height: 1;
 
-      &.current {
-        display: block;
-      }
-
-      .item-header {
-        @include roboto-bold();
-        margin-bottom: $slider-item-header-margin-bottom;
-        font-size: $slider-item-header-font-size;
-      }
-
-      .item-content {
-        @include roboto-light();
-        font-style: oblique;
-        font-size: $slider-item-content-font-size;
-        margin-bottom: $slider-item-content-margin-bottom;
-      }
-
-      .item-user {
-        display: flex;
-        align-items: center;
-        flex-direction: row-reverse;
-        line-height: 1;
-
-        .user-avatar {
-          width: 50px;
-          height: 50px;
-          margin-right: 10px;
-        }
-
-        .name {
-          @include tc-heading-small();
-          @include roboto-bold();
-          color: $user-name-color;
-        }
-
-        .role {
-          color: $user-role-color;
-          font-size: $tc-body-sm;
-        }
-      }
-    }
+  .user-avatar {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
   }
 
-  .carousel-navigation {
-    margin-top: -$carousel-navigation-bottom;
-    display: flex;
-    justify-content: center;
+  .name {
+    @include tc-heading-small();
+    @include roboto-bold();
+    color: $user-name-color;
+  }
 
-    .next, .prev {
-      color: $tc-dark-blue-90;
-      width: 10px;
-      height: 24px;
-      background-repeat: no-repeat;
-      cursor: pointer;
-    }
-
-    .next {
-      background-image: url('../img/shapes/icArrowRight.svg');
-    }
-
-    .prev {
-      background-image: url('../img/shapes/icArrowLeft.svg');
-    }
-
-    .page {
-      margin: 0 $slider-navigation-spacing;
-    }
+  .role {
+    color: $user-role-color;
+    font-size: $tc-body-sm;
   }
 }
 

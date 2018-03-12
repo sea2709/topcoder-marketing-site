@@ -82,6 +82,6 @@ code {
   width: 265px;
 }
 
-.quote-wrap-2 {
+.quote-wrap-2, .full-width-feature-wrap {
   border: 1px solid #CCC;
 }
