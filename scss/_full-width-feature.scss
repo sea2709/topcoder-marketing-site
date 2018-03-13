@@ -1,13 +1,5 @@
 @import 'tc-includes';
 
-$feature-text-block-wrap-background-color: $tc-dark-blue-90;
-$feature-text-block-wrap-text-color: $tc-white;
-$feature-text-block-wrap-padding: $base-unit*8;
-$feature-text-block-corner-radius: $corner-radius*3;
-$feature-text-block-header-font-size: $tc-body-lg*1.8;
-$feature-text-block-vertical-margin: $base-unit*2;
-$feature-text-block-body-min-height: $base-unit*13.2;
-$feature-text-block-body-line-height: $base-unit*5;
 $feature-container-top: $base-unit*20;
 $feature-media-height: $base-unit*127;
 $feature-info-top: $base-unit*40;
@@ -29,28 +21,6 @@ $feature2-carousel-navigation-bottom: $base-unit*4;
 
   .text-block-wrap {
     position: absolute;
-    background-color: $feature-text-block-wrap-background-color;
-    color: $feature-text-block-wrap-text-color;
-    padding: $feature-text-block-wrap-padding;
-    border-radius: $feature-text-block-corner-radius;
-    width: 57.65625%;
-    box-shadow: 0 2px 9px 0 rgba(38, 38, 40, 0.35);
-
-    .header {
-      @include roboto-light();
-      font-size: $feature-text-block-header-font-size;
-      margin-bottom: $feature-text-block-vertical-margin;
-    }
-
-    .body {
-      margin: $feature-text-block-vertical-margin 0;
-      min-height: $feature-text-block-body-min-height;
-      line-height: $feature-text-block-body-line-height;
-    }
-
-    .footer {
-      margin-top: $feature-text-block-vertical-margin;
-    }
   }
 
   .feature-container {

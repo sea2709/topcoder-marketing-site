@@ -82,7 +82,7 @@ code {
   width: 265px;
 }
 
-.quote-wrap-2, .full-width-feature-wrap {
+.quote-wrap-2, .full-width-feature-wrap, .content-box-wrap {
   border: 1px solid #CCC;
 }
 
@@ -94,4 +94,26 @@ code {
   flex: 1;
   width: 0;
   margin: 10px;
+}
+
+.content-box-wrap p {
+  margin: 20px 0;
+}
+
+.content-box-row {
+  display: flex;
+}
+
+.content-box-row .content-box-col {
+  flex: 1;
+  width: 0;
+  margin: 10px;
+}
+.content-box-row .content-box-col-double {
+  flex: 2;
+}
+
+.container-bg {
+  background: #ebebeb;
+  padding: 10px;
 }
