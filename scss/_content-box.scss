@@ -129,6 +129,7 @@ $content-box-column-extra-small-body-horizontal-padding: $base-unit*2;
 
     &.ex-small-style {
       text-align: center;
+      border-radius: 0;
 
       .text-block-wrap {
         padding: 0;
