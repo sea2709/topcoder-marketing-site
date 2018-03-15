@@ -1,20 +1,28 @@
 @import 'tc-includes';
 
+// TEXT BLOCK COMPONENT (used in content box component and feature component)
+// text block vars
 $text-block-wrap-padding: $base-unit*8;
+$text-block-corner-radius: $corner-radius*3;
+$text-block-vertical-margin: $base-unit*4;
+$text-block-body-line-height: $base-unit*5;
+$text-block-header-line-height: $base-unit*9;
+
+// text block stylings
 $text-block-wrap-header-text-color: $tc-black;
 $text-block-wrap-body-text-color: $tc-gray-80;
 $text-block-wrap-background-color: $tc-white;
-$text-block-corner-radius: $corner-radius*3;
 $text-block-header-font-size: $tc-heading-ml;
-$text-block-header-line-height: $base-unit*9;
-$text-block-vertical-margin: $base-unit*2;
-//$text-block-body-min-height: $base-unit*13.2;
-$text-block-body-line-height: $base-unit*5;
 
+// text block default vars
+$text-block-default-width-percentage: 57.65625%;
+
+// text block primary stylings
 $text-block-wrap-primary-background-color: $tc-dark-blue-90;
 $text-block-wrap-primary-header-text-color: $tc-white;
 $text-block-wrap-primary-body-text-color: $tc-white;
 
+// text block secondary stylings
 $text-block-wrap-secondary-background-color: $tc-gray-90;
 $text-block-wrap-secondary-header-text-color: $tc-white;
 $text-block-wrap-secondary-body-text-color: $tc-white;
@@ -33,7 +41,6 @@ $text-block-wrap-secondary-body-text-color: $tc-white;
 
   .body {
     margin: $text-block-vertical-margin 0;
-    //min-height: $text-block-body-min-height;
     line-height: $text-block-body-line-height;
     color: $text-block-wrap-body-text-color;
   }
@@ -43,7 +50,7 @@ $text-block-wrap-secondary-body-text-color: $tc-white;
   }
 
   &.text-block-default {
-    width: 57.65625%;
+    width: $text-block-default-width-percentage;
     border-radius: $text-block-corner-radius;
     box-shadow: 0 2px 9px 0 rgba(38, 38, 40, 0.35);
   }

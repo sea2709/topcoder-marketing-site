@@ -5,6 +5,7 @@
 // Base units
 // Colors
 // Typography
+// User Avatars
 
 // 
 // Base unit and corner radius are to be used instead of direct pixel dimensions.
@@ -161,6 +162,13 @@ $tc-heading-xs: $tc-body-sm;
 
 // breakpoints
 $screen-lg: 1360px;
+$screen-xxmd: 1280px;
+$screen-xmd: 1024px;
 $screen-md: 768px;
 $screen-sm: 640px;
 $screen-xs: 320px;
+
+// USER AVATAR
+$user-avatar-round-radius: 50%;
+$user-avatar-default-width: $base-unit*10;
+$user-avatar-default-height: $base-unit*10;

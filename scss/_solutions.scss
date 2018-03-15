@@ -1,31 +1,39 @@
 @import 'tc-includes';
 
+// SOLUTION COMPONENT
+//
+// solution vars
 $solution-wrap-horizontal-padding: $base-unit*8;
 $solution-wrap-vertical-padding: $base-unit*6;
 $solution-wrap-corner-radius: $corner-radius*3;
+$solution-col-horizontal-padding: $base-unit*8;
+$solution-header-line-height: $base-unit*6;
+$solution-header-margin-bottom: $base-unit*2;
+$solution-content-margin-left: $base-unit*7;
+$solution-header-margin-top: $base-unit*4;
+$solution-description-line-height: $base-unit*5;
+$solution-description-margin-top: $base-unit;
+$solution-sub-row-spacing: $base-unit*6;
+$solution-icon-margin-right: $base-unit*2;
+
+// solution column width
+$solution-col1-width: 44%;
+$solution-col2-width: 37%;
+$solution-col3-width: 19%;
+
+// solution stylings
 $solution-wrap-border-color: $tc-gray-20;
 $solution-wrap-border-left-color: $tc-light-blue-100;
 $solution-wrap-border-width: $base-unit*2;
 $solution-wrap-link-color: $tc-dark-blue-95;
-
-$solution-col-horizontal-padding: $base-unit*8;
-
+$solution-col-border-width: $base-unit/5;
 $solution-header-font-size: $tc-body-lg;
 $solution-header-text-color: $tc-black;
-$solution-header-line-height: $base-unit*6;
-$solution-header-margin-bottom: $base-unit*2;
-
-$solution-content-margin-left: $base-unit*7;
-
-$solution-header-margin-top: $base-unit*4;
-
 $solution-description-font-size: $tc-body-md;
-$solution-description-line-height: $base-unit*5;
-$solution-description-margin-top: $base-unit;
 
-$solution-sub-row-spacing: $base-unit*6;
-$solution-icon-margin-right: $base-unit*2;
-
+// SOLUTION SMALL COMPONENT
+//
+// solution small vars
 $solution-wrap-small-padding: $base-unit*6;
 
 .solution-wrap {
@@ -53,21 +61,21 @@ $solution-wrap-small-padding: $base-unit*6;
   }
 
   .solution-col + .solution-col {
-    border-left: 1px solid $solution-wrap-border-color;
+    border-left: $solution-col-border-width solid $solution-wrap-border-color;
     padding-left: $solution-col-horizontal-padding;
   }
 
   .solution-col-1 {
-    width: 44%;
+    width: $solution-col1-width;
     display: flex;
   }
 
   .solution-col-2 {
-    width: 37%;
+    width: $solution-col2-width;
   }
 
   .solution-col-3 {
-    width: 19%;
+    width: $solution-col3-width;
   }
 
   .header {

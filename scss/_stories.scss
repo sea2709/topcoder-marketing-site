@@ -1,23 +1,31 @@
 @import 'tc-includes';
 
+// STORY COMPONENT
+//
+// story vars
 $story-padding: $base-unit*3;
 $story-corner-radius: $corner-radius*3;
 $story-image-height: $base-unit*38;
 $story-image-corner-radius: $corner-radius*3;
 $story-content-padding: $base-unit*4;
-$story-text-color: $tc-white;
 $story-header-margin-bottom: $base-unit*2;
+$story-body-line-height: $base-unit*5.2;
 $story-footer-margin-top: $base-unit*8;
+$story-sub-header-margin-bottom: $base-unit*4;
+
+// story stylings
+$story-text-color: $tc-white;
 $story-term-font-size: $tc-body-md;
 $story-date-font-size: $tc-body-sm;
-$story-sub-header-margin-bottom: $base-unit*4;
 $story-sub-header-font-size: $tc-body-md;
-
 $story-bar-border-width: $base-unit*2;
 $story-bar-text-color: $tc-black;
 
+// STORY FEATURE COMPONENT
+//
+// story feature vars
 $story-featured-text-color: $tc-white;
-$story-featured-image-opacity: 0.5;
+$story-featured-image-blend-mode: hard-light;
 $story-featured-padding: $base-unit*12;
 $story-featured-header-font-size: $tc-heading-xl;
 $story-featured-header-line-height: $base-unit*10;
@@ -25,6 +33,7 @@ $story-featured-header-margin-bottom: $base-unit*2;
 $story-featured-body-font-size: $tc-body-lg;
 $story-featured-body-line-height: $base-unit*6.4;
 
+// define colors using for component gradient color and color bar
 $story-color-1: #ae54f4;
 $story-color-2: #4cbff6;
 $story-color-3: #ef4770;
@@ -37,10 +46,17 @@ $story-color-8: #49d851;
 .story-wrap {
   @include roboto();
 
-  color: $story-text-color;
   position: relative;
   box-shadow: 0 2px 9px 0 rgba(38, 38, 40, 0.15);
   padding: $story-padding;
+
+  .story-header, .story-term, .story-date, .story-body {
+    color: $story-text-color;
+  }
+
+  .story-body {
+    line-height: $story-body-line-height;
+  }
 
   &:before {
     content: '';
@@ -50,7 +66,7 @@ $story-color-8: #49d851;
     left: 0;
     right: 0;
     border-radius: $story-corner-radius;
-    background: linear-gradient(141deg, $story-color-1, $story-color-2);
+    background-image: linear-gradient(141deg, $story-color-1, $story-color-2);
   }
 
   &.gradient-style-2 {
@@ -120,7 +136,9 @@ $story-color-8: #49d851;
   }
 
   &.bar {
-    color: $story-bar-text-color;
+    .story-header, .story-term, .story-date, .story-body {
+      color: $story-bar-text-color;
+    }
 
     .story-container {
       margin-left: -$story-padding;
@@ -135,7 +153,10 @@ $story-color-8: #49d851;
 
   &.featured {
     padding: 0;
-    color: $story-featured-text-color;
+
+    .story-header, .story-term, .story-date, .story-body, .story-sub-header {
+      color: $story-featured-text-color;
+    }
 
     .story-cover-image {
       position: absolute;
@@ -143,7 +164,7 @@ $story-color-8: #49d851;
       height: 100%;
       object-fit: cover;
       object-position: center center;
-      opacity: $story-featured-image-opacity;
+      mix-blend-mode: $story-featured-image-blend-mode;
       border-radius: $story-corner-radius;
     }
 

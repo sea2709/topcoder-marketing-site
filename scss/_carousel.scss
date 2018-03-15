@@ -1,7 +1,13 @@
 @import 'tc-includes';
 
+// carousel vars
 $carousel-navigation-bottom: $base-unit*8;
 $carousel-navigation-spacing: $base-unit*1.6;
+$carousel-navigation-arrow-width: $base-unit*2.4;
+$carousel-navigation-arrow-height: $base-unit*4.8;
+
+// carousel stylinga
+$carousel-navigation-text-color: $tc-gray-80;
 
 .carousel-wrap {
   height: 100%;
@@ -22,21 +28,23 @@ $carousel-navigation-spacing: $base-unit*1.6;
     margin-top: -$carousel-navigation-bottom;
     display: flex;
     justify-content: center;
+    align-items: center;
+    color: $carousel-navigation-text-color;
 
     .next, .prev {
       color: $tc-dark-blue-90;
-      width: 10px;
-      height: 24px;
+      width: $carousel-navigation-arrow-width;
+      height: $carousel-navigation-arrow-height;
       background-repeat: no-repeat;
       cursor: pointer;
     }
 
     .next {
-      background-image: url('../img/shapes/icArrowRight.svg');
+      background-image: url('../img/icons/carret-right.svg');
     }
 
     .prev {
-      background-image: url('../img/shapes/icArrowLeft.svg');
+      background-image: url('../img/icons/carret-left.svg');
     }
 
     .page {

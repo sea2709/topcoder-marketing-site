@@ -4,7 +4,7 @@
     <!-- Meta Tags -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <title>Topcoder 2.0</title>
+    <title>Topcoder 2.0 - Content Box</title>
 
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/demo.css">
@@ -19,9 +19,9 @@
     <!-- Full Width - Wide Image component (component/content-box/full-width/v1) -->
     <h2>Full Width - Wide Image</h2>
     <div class="content-box-wrap">
-        <div class="content-box-image">
+        <div class="content-box-image image-container">
             <img src="img/sample-content-box-1.jpg" alt="Meet our Community" />
-            <div class="content-box-image-mask"></div>
+            <div class="content-box-image-mask image-mask"></div>
         </div>
         <div class="content-box-content">
             <div class="text-block-wrap text-block-secondary">
@@ -41,8 +41,9 @@
     <!-- html demo wrap -->
     <script class="code-wrap" type="text/plain">
         <div class="content-box-wrap">
-            <div class="content-box-image">
+            <div class="content-box-image image-container">
                 <img src="img/sample-content-box-1.jpg" alt="Meet our Community" />
+                <div class="content-box-image-mask image-mask"></div>
             </div>
             <div class="content-box-content">
                 <div class="text-block-wrap text-block-secondary">
@@ -63,8 +64,9 @@
 
     <!-- Full Width - Wide Image component (component/content-box/full-width/v2) -->
     <h2>Full Width - Half Image</h2>
+    <p>Add class <code>content-box-half-image</code> for the style content box half image.</p>
     <div class="content-box-wrap content-box-half-image">
-        <div class="content-box-image">
+        <div class="content-box-image image-container">
             <img src="img/466330754.jpg" srcset="img/466330754@2x.jpg 2x, img/466330754@3x.jpg 3x" alt="Why We Started" />
         </div>
         <div class="content-box-content">
@@ -97,7 +99,7 @@
     <!-- html demo wrap -->
     <script class="code-wrap" type="text/plain">
         <div class="content-box-wrap content-box-half-image">
-            <div class="content-box-image">
+            <div class="content-box-image image-container">
                 <img src="img/466330754.jpg" srcset="img/466330754@2x.jpg 2x, img/466330754@3x.jpg 3x" alt="Why We Started" />
             </div>
             <div class="content-box-content">
@@ -131,12 +133,17 @@
 
     <!-- 6 column (component/content-box/6-column/v2, component/content-box/6-column/v3, component/content-box/6-column/v1) -->
     <h2>6 column</h2>
+    <p>
+        Add class <code>content-box-column</code> to layout the content box for stacking image and content,
+        add class <code>big-style</code> for big style of stacking image and content layout (usually the 6 column content box).
+    </p>
     <div class="container-bg">
         <div class="content-box-row">
             <div class="content-box-col">
                 <div class="content-box-wrap content-box-column big-style">
-                    <div class="content-box-image">
-                        <img src="img/sample-content-box-2.jpg" alt="Read the Forrester Total Economic Impact (™) of Topcoder" />
+                    <div class="content-box-image image-container">
+                        <img src="img/sample-content-box-2.jpg"
+                            alt="Read the Forrester Total Economic Impact (™) of Topcoder" />
                     </div>
                     <div class="content-box-content">
                         <div class="text-block-wrap">
@@ -147,7 +154,7 @@
                                 113% ROI on large enterprise crowdsourcing programs
                             </div>
                             <div class="footer">
-                                <a href="#" class="tc-btn tc-btn-md tc-btn-primary">Get the Study</a>
+                                <a href="#" class="tc-btn tc-btn-primary">Get the Study</a>
                             </div>
                         </div>
                     </div>
@@ -155,9 +162,9 @@
             </div>
             <div class="content-box-col">
                 <div class="content-box-wrap content-box-column big-style">
-                    <div class="content-box-image">
+                    <div class="content-box-image image-container">
                         <img src="img/sample-content-box-3.jpg" alt="Read the Forrester Total Economic Impact (™) of Topcoder" />
-                        <div class="content-box-image-mask"></div>
+                        <div class="content-box-image-mask image-mask"></div>
                     </div>
                     <div class="content-box-content">
                         <div class="text-block-wrap">
@@ -165,7 +172,7 @@
                                 Read the Forrester Total Economic Impact (™) of Topcoder
                             </div>
                             <div class="footer">
-                                <a href="#" class="tc-btn tc-btn-md tc-btn-primary">Get the Study</a>
+                                <a href="#" class="tc-btn tc-btn-primary">Get the Study</a>
                             </div>
                         </div>
                     </div>
@@ -175,7 +182,7 @@
         <div class="content-box-row">
             <div class="content-box-col">
                 <div class="content-box-wrap content-box-column big-style">
-                    <div class="content-box-image">
+                    <div class="content-box-image image-container">
                         <img src="img/sample-content-box-5.jpg" alt="Resources" />
                     </div>
                     <div class="content-box-content">
@@ -195,7 +202,7 @@
                                 </p>
                             </div>
                             <div class="footer">
-                                <a href="#" class="tc-btn tc-btn-md tc-btn-primary">View More Resources</a>
+                                <a href="#" class="tc-btn tc-btn-primary">View More Resources</a>
                             </div>
                         </div>
                     </div>
@@ -208,7 +215,7 @@
     <!-- html demo wrap -->
     <script class="code-wrap" type="text/plain">
         <div class="content-box-wrap content-box-column big-style">
-            <div class="content-box-image">
+            <div class="content-box-image image-container">
                 <img src="img/sample-content-box-2.jpg" alt="Read the Forrester Total Economic Impact (™) of Topcoder" />
             </div>
             <div class="content-box-content">
@@ -220,7 +227,7 @@
                         113% ROI on large enterprise crowdsourcing programs
                     </div>
                     <div class="footer">
-                        <a href="#" class="tc-btn tc-btn-md tc-btn-primary">Get the Study</a>
+                        <a href="#" class="tc-btn tc-btn-primary">Get the Study</a>
                     </div>
                 </div>
             </div>
@@ -229,25 +236,12 @@
 
     <!-- 4 column (component/content-box/4-column/v2) -->
     <h2>4 column</h2>
-    <div class="content-box-row">
-        <div class="content-box-col">
-            <div class="content-box-wrap content-box-column solid-bar">
-                <div class="content-box-content">
-                    <div class="text-block-wrap">
-                        <div class="header">
-                            Advantages of using Topcoder
-                        </div>
-                        <div class="body">
-                            Go from app idea to agency-quality application designs in just days.
-                            Topcoder gives you on-demand access to a virtually limitless network
-                            of industry-leading app designers.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="content-box-col content-box-col-double">
-            <script class="code-wrap" type="text/plain">
+    <p>
+        Add class <code>solid-bar</code> for the style with a solid bar on top.
+    </p>
+    <div class="container-bg">
+        <div class="content-box-row">
+            <div class="content-box-col">
                 <div class="content-box-wrap content-box-column solid-bar">
                     <div class="content-box-content">
                         <div class="text-block-wrap">
@@ -262,15 +256,37 @@
                         </div>
                     </div>
                 </div>
-            </script>
+            </div>
+            <div class="content-box-col content-box-col-double">
+                <script class="code-wrap" type="text/plain">
+                    <div class="content-box-wrap content-box-column solid-bar">
+                        <div class="content-box-content">
+                            <div class="text-block-wrap">
+                                <div class="header">
+                                    Advantages of using Topcoder
+                                </div>
+                                <div class="body">
+                                    Go from app idea to agency-quality application designs in just days.
+                                    Topcoder gives you on-demand access to a virtually limitless network
+                                    of industry-leading app designers.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </script>
+            </div>
         </div>
     </div>
 
     <h2>4 column with photo</h2>
-    <div class="content-box-row">
+    <p>
+        Add class <code>small-style</code> for the content box small (usually the 4 column content box).
+    </p>
+    <div class="container-bg">
+        <div class="content-box-row">
         <div class="content-box-col">
             <div class="content-box-wrap content-box-column small-style">
-                <div class="content-box-image">
+                <div class="content-box-image image-container">
                     <img src="img/resources-banner.jpg" srcset="img/resources-banner@2x.jpg 2x, img/resources-banner@3x.jpb 3x" />
                 </div>
                 <div class="content-box-content">
@@ -311,54 +327,59 @@
             </script>
         </div>
     </div>
+    </div>
 
     <h2>Content with Icon</h2>
-    <div class="content-box-row">
-        <div class="content-box-col">
-            <p>
-                with icon set in CSS
-            </p>
-            <div class="content-box-wrap content-box-column ex-small-style">
-                <div class="content-box-content">
-                    <div class="text-block-wrap">
-                        <div class="content-box-image">
-                            <span class="ic ic-xl ic-members"></span>
-                        </div>
-                        <div class="header">
-                            More Designers on Your Project
-                        </div>
-                        <div class="body">
-                            With Topcoder, you get a team of world- class designers for the price of a freelancer, and we deliver multiple application
-                            design options for you to choose from.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="content-box-col">
-            <p>
-                with icon that is image based
-            </p>
-            <div class="content-box-wrap content-box-column ex-small-style">
-                <div class="content-box-content">
-                    <div class="text-block-wrap">
-                        <div class="content-box-image">
-                            <img src="img/members.png" srcset="img/members@2x.png 2x, img/members@3x.png 3x" alt="More Designers on Your Project" />
-                        </div>
-                        <div class="header">
-                            More Designers on Your Project
-                        </div>
-                        <div class="body">
-                            With Topcoder, you get a team of world- class designers for the price of a freelancer, and we deliver multiple application
-                            design options for you to choose from.
+    <p>
+        Add class <code>ex-small-style</code> for the content box extra small (usually the small content box with icon and text).
+    </p>
+    <div class="container-bg">
+        <div class="content-box-row">
+            <div class="content-box-col">
+                <p>
+                    with icon set in CSS
+                </p>
+                <div class="content-box-wrap content-box-column ex-small-style">
+                    <div class="content-box-content">
+                        <div class="text-block-wrap">
+                            <div class="content-box-image">
+                                <span class="ic ic-xl ic-members"></span>
+                            </div>
+                            <div class="header">
+                                More Designers on Your Project
+                            </div>
+                            <div class="body">
+                                With Topcoder, you get a team of world- class designers for the price of a freelancer, and we deliver multiple application
+                                design options for you to choose from.
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="content-box-col content-box-col-double">
-            <!-- html demo wrap -->
-            <script class="code-wrap" type="text/plain">
+            <div class="content-box-col">
+                <p>
+                    with icon that is image based
+                </p>
+                <div class="content-box-wrap content-box-column ex-small-style">
+                    <div class="content-box-content">
+                        <div class="text-block-wrap">
+                            <div class="content-box-image">
+                                <img src="img/members.png" srcset="img/members@2x.png 2x, img/members@3x.png 3x" alt="More Designers on Your Project" />
+                            </div>
+                            <div class="header">
+                                Get a Team for the Price of a Freelancer
+                            </div>
+                            <div class="body">
+                                Don’t tie your project’s success to one freelancer’s time and expertise. Topcoder gives you a team of industry-
+                                leading designers and developers.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-box-col content-box-col-double">
+                <!-- html demo wrap -->
+                <script class="code-wrap" type="text/plain">
     <div class="content-box-wrap content-box-column ex-small-style">
         <div class="content-box-content">
             <div class="text-block-wrap">
@@ -377,10 +398,17 @@
             </div>
         </div>
     </div>
-            </script>
-        </div>
+                </script>
+            </div>
+    </div>
     </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+<script type="text/javascript">
+    if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent))
+        document.write('<script src="./js/ie-fix.js"><\/script>');
+</script>
 
 </body>
 </html>

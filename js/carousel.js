@@ -49,7 +49,6 @@ carousel = function(box){
 
 (function() {
     var carousels = document.querySelectorAll('.carousel-wrap');
-
     if (!carousels) {
         return;
     }

@@ -82,10 +82,6 @@ code {
   width: 265px;
 }
 
-.quote-wrap-2, .full-width-feature-wrap, .content-box-wrap {
-  border: 1px solid #CCC;
-}
-
 .stories-row, .solutions-row {
   display: flex;
 }

@@ -29,7 +29,7 @@ a.tc-btn {
 }
 
 .tc-btn {
-  @include roboto;
+  @include roboto-medium();
   display: inline-flex;
   align-items: center;
   vertical-align: middle;
@@ -58,9 +58,9 @@ a.tc-btn {
 }
 
 .tc-btn-primary {
-  background: $tc-dark-blue-100;
-  border-color: $tc-dark-blue-100;
-  color: $tc-dark-blue-30;
+  background: $tc-dark-blue-90;
+  border-color: $tc-dark-blue-90;
+  color: $tc-white;
 
   &:hover:enabled,
   &:active:enabled,
@@ -117,8 +117,8 @@ a.tc-btn-secondary,
 
 .tc-btn-default {
   background: $tc-white;
-  border-color: $tc-gray-50;
-  color: $tc-gray-70;
+  border-color: $tc-gray-30;
+  color: $tc-gray-80;
 
   &.loading:enabled,
   &:focus:enabled {
