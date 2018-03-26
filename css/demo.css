@@ -86,10 +86,15 @@ code {
   display: flex;
 }
 
-.stories-row .story-col, .solutions-row .solution-col {
+.stories-row .story-col {
   flex: 1;
   width: 0;
   margin: 10px;
+}
+
+.solutions-row .solution-col {
+  flex: 1;
+  width: 0;
 }
 
 .content-box-wrap p {
